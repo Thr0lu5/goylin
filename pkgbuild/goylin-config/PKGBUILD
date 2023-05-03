@@ -1,0 +1,41 @@
+# Maintainer: Felipe <felipe.neiva@ifg.edu.br>
+pkgname="goylin-config"
+pkgver=0.1
+pkgrel=1
+pkgdesc="Install Goylin configuration files"
+arch=("any")
+url="https://github.com/Thr0lu5"
+license=("GPL")
+groups=("goylin")
+depends=()
+makedepends=()
+optdepends=()
+provides=(${pkgname})
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=()
+noextract=()
+
+prepare() {
+	cp -rv ../goylin-config/* .
+}
+
+build() {
+	echo
+}
+
+check() {
+	echo
+}
+
+package() {
+	install -Dm 665 pacman.conf "${pkgdir}/etc"
+	install -Dm 665 vconsole.conf "${pkgdir}/etc"
+	install -Dm 665 locale.gen "${pkgdir}/etc"
+	install -Dm 665 locale.conf "${pkgdir}/etc"
+	install -Dm 665 hosts "${pkgdir}/etc"
+}

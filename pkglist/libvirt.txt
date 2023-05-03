@@ -1,0 +1,5 @@
+libvirt
+qemu
+iptables-nft
+dnsmasq
+virt-manager

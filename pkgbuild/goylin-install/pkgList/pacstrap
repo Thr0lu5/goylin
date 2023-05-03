@@ -1,0 +1,10 @@
+base
+linux
+linux-firmware
+reflector
+vim
+archlinux-keyring
+terminus-font
+rsync
+grub-efi-x86_64-efi
+efibootmgr
