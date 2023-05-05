@@ -17,11 +17,12 @@ backup=()
 options=()
 install=
 changelog=
-source=()
+#source=("${pkgname}.tar.gz")
 noextract=()
+#md5sums=("SKIP")
 
 prepare() {
-	cp -rv ../goylin-config/* .
+	cp -r ../${pkgname}/* ${srcdir}
 }
 
 build() {
@@ -33,9 +34,5 @@ check() {
 }
 
 package() {
-	install -Dm 665 pacman.conf "${pkgdir}/etc"
-	install -Dm 665 vconsole.conf "${pkgdir}/etc"
-	install -Dm 665 locale.gen "${pkgdir}/etc"
-	install -Dm 665 locale.conf "${pkgdir}/etc"
-	install -Dm 665 hosts "${pkgdir}/etc"
+	sudo install -Dm 644 ${srcdir}/vconsole.conf -t ${pkgdir}/etc
 }
