@@ -1,0 +1,18 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-workstation
+pkgver=0.1
+pkgrel=1
+pkgdesc=""
+arch=("any")
+url=""
+license=('GPL')
+groups=("goylin")
+depends=(
+dmenu
+rofi
+i3-gaps
+i3blocks
+i3status
+i3lock
+)
+provides=(${pkgname})

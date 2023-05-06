@@ -1,0 +1,30 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-workstation
+pkgver=0.1
+pkgrel=1
+pkgdesc=""
+arch=("any")
+url=""
+license=('GPL')
+groups=("goylin")
+depends=(
+    goylin-base
+    goylin-fonts
+    pulseaudio
+    alsautils
+    alsa-plugins
+    pavucontrol
+    bluez
+    bluez-utils
+    blueman 
+    cups
+    plasma-meta
+    #kde-applications-meta
+    packagekit-qt5
+    vlc
+    firefox
+)
+provides=(${pkgname})
+package() {
+    sudo systemctl enable bluetooth
+}

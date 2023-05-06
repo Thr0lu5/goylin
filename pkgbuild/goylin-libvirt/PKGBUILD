@@ -1,0 +1,17 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-libvirt
+pkgver=0.1
+pkgrel=1
+pkgdesc=""
+arch=("any")
+url=""
+license=('GPL')
+groups=("goylin")
+depends=(
+libvirt
+qemu
+iptables-nft
+dnsmasq
+virt-manager
+)
+provides=(${pkgname})

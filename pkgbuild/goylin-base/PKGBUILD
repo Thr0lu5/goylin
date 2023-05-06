@@ -1,0 +1,47 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-base
+pkgver=0.1
+pkgrel=1
+groups=("goylin")
+depends=(
+    intel-ucode
+    xf86-video-intel
+    mesa
+    lib32-mesa
+    xorg
+    networkmanager
+    network-manager-applet
+    dhcpcd
+    iw
+    wpa_supplicant
+    zip
+    unzip
+    unrar
+    p7zip
+    ranger
+    #pa-applet
+    zsh
+    man-db
+    rsync
+    #paru
+    pulseaudio
+    alsa-utils
+    alsa-plugins
+    pavucontrol
+    xdg-user-dirs
+    numlockx
+    curl
+    wget
+    htop
+    lshw
+    git
+    dialog
+    bash-completion
+    base-devel
+)
+provides=(${pkgname})
+package() {
+    sudo systemctl enable sshd
+    sudo systemctl enable dhcpcd
+    sudo systemctl enable NetworkManager
+}

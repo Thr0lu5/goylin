@@ -1,0 +1,25 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-fonts
+pkgver=0.1
+pkgrel=1
+pkgdesc=""
+arch=("any")
+url=""
+license=('GPL')
+groups=("goylin")
+depends=(
+    noto-fonts
+    noto-fonts-emoji
+    noto-fonts-cjk
+    ttf-ubuntu-font-family
+    ttf-dejavu
+    ttf-freefont
+    ttf-liberation
+    ttf-droid
+    ttf-roboto
+    terminus-font
+    ttf-jetbrains-mono
+    ttf-joypixels
+    ttf-font-awesome
+)
+provides=(${pkgname})

@@ -1,0 +1,18 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-bluetooth
+pkgver=0.1
+pkgrel=1
+groups=("goylin")
+depends=(
+    tlp
+    tlp-rwd
+    powertop
+    acpi
+)
+provides=(${pkgname})
+
+package() {
+    sudo systemctl enable tlp
+    sudo systemctl enable tlp-sleep
+    sudo systemctl mask systemd-rfkill.service
+}

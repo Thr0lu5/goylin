@@ -1,0 +1,9 @@
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=goylin-base
+pkgver=0.1
+pkgrel=1
+groups=("goylin")
+depends=(
+    papirus-icon-theme
+)
+provides=(${pkgname})

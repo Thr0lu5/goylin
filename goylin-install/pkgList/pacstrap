@@ -1,0 +1,10 @@
+base
+linux
+linux-firmware
+vim
+nano
+terminus-font
+grub
+efibootmgr
+openssh
+reflector
